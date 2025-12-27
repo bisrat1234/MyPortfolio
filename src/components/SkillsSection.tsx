@@ -1,17 +1,17 @@
 const skills = [
-  { name: 'React', level: 90, color: 'from-cyan-400 to-blue-500' },
-  { name: 'JavaScript', level: 88, color: 'from-yellow-400 to-orange-500' },
-  { name: 'Java', level: 85, color: 'from-red-400 to-red-600' },
-  { name: 'TypeScript', level: 80, color: 'from-blue-400 to-blue-600' },
-  { name: 'Node.js', level: 75, color: 'from-green-400 to-green-600' },
-  { name: 'HTML/CSS', level: 92, color: 'from-orange-400 to-pink-500' },
-  { name: 'Git', level: 82, color: 'from-gray-400 to-gray-600' },
-  { name: 'SQL', level: 78, color: 'from-purple-400 to-purple-600' },
+  { name: 'React', level: 75, color: 'from-cyan-400 to-blue-500' },
+  { name: 'JavaScript', level: 80, color: 'from-yellow-400 to-orange-500' },
+  { name: 'Java', level: 70, color: 'from-red-400 to-red-600' },
+  { name: 'PHP', level: 65, color: 'from-purple-400 to-purple-600' },
+  { name: 'MySQL', level: 70, color: 'from-blue-400 to-blue-600' },
+  { name: 'HTML/CSS', level: 85, color: 'from-orange-400 to-pink-500' },
+  { name: 'Git', level: 65, color: 'from-gray-400 to-gray-600' },
+  { name: 'TypeScript', level: 60, color: 'from-blue-400 to-blue-600' },
 ];
 
 const technologies = [
-  'React', 'Java', 'JavaScript', 'TypeScript', 'Node.js', 'Express',
-  'Spring Boot', 'PostgreSQL', 'MongoDB', 'Git', 'REST API', 'Tailwind CSS'
+  'React', 'Java', 'JavaScript', 'PHP', 'MySQL', 'Node.js', 'Express',
+  'Spring Boot', 'MongoDB', 'Git', 'REST API', 'Tailwind CSS'
 ];
 
 export const SkillsSection = () => {
@@ -70,7 +70,7 @@ export const SkillsSection = () => {
               <div className="mt-8 pt-6 border-t border-border">
                 <h4 className="font-semibold mb-4 text-sm sm:text-base">Currently Learning</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Docker', 'AWS', 'GraphQL'].map((tech) => (
+                  {['Mobile App Development', 'React Native', 'Flutter'].map((tech) => (
                     <span
                       key={tech}
                       className="px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-lg text-xs sm:text-sm font-medium text-primary"

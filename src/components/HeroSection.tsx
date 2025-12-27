@@ -14,7 +14,7 @@ export const HeroSection = () => {
           {/* Terminal-style greeting */}
           <div className="inline-block mb-6 sm:mb-8 px-4 py-2 bg-secondary/50 rounded-full border border-border animate-fade-in">
             <span className="font-mono text-xs sm:text-sm text-muted-foreground">
-              <span className="text-primary">~/portfolio</span> $ whoami
+              <span className="text-primary"></span> $ Hello, Welcome to my Portfolio!
             </span>
           </div>
 
@@ -24,12 +24,12 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-3 sm:mb-4 animate-slide-up font-mono" style={{ animationDelay: '0.2s' }}>
-            <span className="typing-cursor">Full Stack Developer</span>
+            <span className="typing-cursor">Junior Full Stack Developer</span>
           </p>
 
           <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
             4th Year Software Engineering Student at Debre Markos University.
-            Passionate about building modern web applications with React, Java & JavaScript.
+            Building practical web applications and learning modern development technologies.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>

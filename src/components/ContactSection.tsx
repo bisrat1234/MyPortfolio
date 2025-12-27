@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Mail, Github, MapPin, Send } from 'lucide-react';
+import { Mail, Github, MapPin, Send, MessageCircle, Youtube } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -14,14 +14,19 @@ export const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Open email client with pre-filled message
+    // Create mailto link with form data
     const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:damitachewyiradu@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.open(`mailto:damitachewyiradu@gmail.com?subject=${subject}&body=${body}`, '_self');
+    
+    // Clear form
+    setFormData({ name: '', email: '', message: '' });
     
     toast({
-      title: "Opening email client...",
-      description: "Your message has been prepared. Please send the email to complete.",
+      title: "Email opened!",
+      description: "Your default email client should open with the message ready to send.",
     });
   };
 
@@ -83,6 +88,36 @@ export const ContactSection = () => {
                       <p className="font-medium text-sm sm:text-base">Debre Markos, Ethiopia</p>
                     </div>
                   </div>
+
+                  <a 
+                    href="https://t.me/hiwot423"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-3 sm:p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-all group"
+                  >
+                    <div className="p-3 rounded-lg bg-[#0088cc]/10 text-[#0088cc] group-hover:glow-sm transition-all shrink-0">
+                      <MessageCircle size={24} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Telegram</p>
+                      <p className="font-medium text-sm sm:text-base">@hiwot423</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href="https://www.youtube.com/@lijinettube2017"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-3 sm:p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-all group"
+                  >
+                    <div className="p-3 rounded-lg bg-[#ff0000]/10 text-[#ff0000] group-hover:glow-sm transition-all shrink-0">
+                      <Youtube size={24} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">YouTube</p>
+                      <p className="font-medium text-sm sm:text-base">@lijinettube2017</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -100,7 +135,7 @@ export const ContactSection = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all text-sm sm:text-base"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                   />
                 </div>
 
@@ -112,7 +147,7 @@ export const ContactSection = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all text-sm sm:text-base"
-                    placeholder="john@example.com"
+                    placeholder="Enter your email address"
                   />
                 </div>
 
@@ -124,7 +159,7 @@ export const ContactSection = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none text-sm sm:text-base"
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your project ..."
                   />
                 </div>
 

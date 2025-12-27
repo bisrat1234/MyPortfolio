@@ -3,43 +3,28 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce application with React frontend and Java Spring Boot backend. Features include user authentication, product management, and payment integration.',
-    tags: ['React', 'Java', 'Spring Boot', 'PostgreSQL'],
-    github: 'https://github.com/bisrat1234',
+    title: 'Clearance Management System',
+    description: 'A comprehensive system for managing student clearance processes in educational institutions. Built with modern web technologies to streamline administrative workflows.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    github: 'https://github.com/bisrat1234/ClearanceManagementSystem',
+    live: '',
     featured: true,
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-    github: 'https://github.com/bisrat1234',
-    featured: true,
-  },
-  {
-    title: 'Portfolio Website',
-    description: 'A modern, responsive portfolio website showcasing projects and skills with smooth animations and a clean design.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    github: 'https://github.com/bisrat1234',
-    featured: true,
-  },
-  {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather application with location-based forecasts, interactive maps, and weather alerts.',
-    tags: ['JavaScript', 'API Integration', 'CSS'],
-    github: 'https://github.com/bisrat1234',
-  },
-  {
-    title: 'Blog Platform',
-    description: 'A full-featured blog platform with markdown support, commenting system, and user authentication.',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-    github: 'https://github.com/bisrat1234',
-  },
-  {
-    title: 'Student Management System',
-    description: 'An academic management system for tracking student records, grades, and attendance.',
+    title: 'Court Case Management System',
+    description: 'A digital solution for managing court cases, tracking legal proceedings, and maintaining case records. Designed to improve efficiency in judicial administration.',
     tags: ['Java', 'Spring Boot', 'MySQL', 'React'],
-    github: 'https://github.com/bisrat1234',
+    github: 'https://github.com/bisrat1234/CourtCaseManagementSystem',
+    live: '',
+    featured: true,
+  },
+  {
+    title: 'Personal Portfolio',
+    description: 'A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with React, TypeScript, and Tailwind CSS for optimal performance.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/bisrat1234/portfolio',
+    live: '',
+    featured: true,
   },
 ];
 
@@ -54,17 +39,15 @@ export const ProjectsSection = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              A collection of projects I've worked on and future plans
+              My completed projects and contributions
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className={`card-gradient rounded-2xl p-5 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group animate-slide-up flex flex-col ${
-                  project.featured ? 'lg:col-span-1' : ''
-                }`}
+                className="card-gradient rounded-2xl p-5 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group animate-slide-up flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -78,6 +61,16 @@ export const ProjectsSection = () => {
                     >
                       <Github size={20} />
                     </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

@@ -13,8 +13,23 @@ export const AboutSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Left side - Terminal style info */}
-            <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-border shadow-lg">
+            {/* Left side - Profile Image */}
+            <div className="order-2 lg:order-1">
+              <div className="relative max-w-md mx-auto">
+                <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
+                  <img 
+                    src="/WIN_20251221_16_03_57_Pro.jpg" 
+                    alt="Damitachew Yiradu" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse-glow" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" />
+              </div>
+            </div>
+
+            {/* Right side - Terminal style info */}
+            <div className="order-1 lg:order-2 card-gradient rounded-2xl p-6 sm:p-8 border border-border shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -40,7 +55,7 @@ export const AboutSection = () => {
             </div>
 
             {/* Right side - Info cards */}
-            <div className="space-y-4 sm:space-y-6">
+            <div className="order-3 lg:col-span-2 xl:col-span-1 space-y-4 sm:space-y-6">
               <div className="card-gradient rounded-xl p-4 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:glow-sm transition-all shrink-0">

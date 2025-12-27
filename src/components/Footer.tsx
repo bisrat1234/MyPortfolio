@@ -1,4 +1,4 @@
-import { Github, Mail, Heart } from 'lucide-react';
+import { Github, Mail, Heart, MessageCircle, Youtube } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,12 +31,28 @@ export const Footer = () => {
               >
                 <Github size={20} />
               </a>
+              <a
+                href="https://t.me/hiwot423"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg bg-secondary text-[#0088cc] hover:text-[#0088cc] hover:bg-[#0088cc]/10 transition-all"
+              >
+                <MessageCircle size={20} />
+              </a>
+              <a
+                href="https://www.youtube.com/@lijinettube2017"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg bg-secondary text-[#ff0000] hover:text-[#ff0000] hover:bg-[#ff0000]/10 transition-all"
+              >
+                <Youtube size={20} />
+              </a>
             </div>
 
             {/* Copyright */}
             <p className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1 text-center">
-              © {currentYear} Damitachew Yiradu. Built with{' '}
-              <Heart className="text-red-500 inline" size={14} /> and React
+              © {currentYear} Damitachew Yiradu. All rights reserved. 
+              
             </p>
           </div>
         </div>
