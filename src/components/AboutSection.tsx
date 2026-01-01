@@ -18,7 +18,7 @@ export const AboutSection = () => {
               <div className="relative max-w-md mx-auto">
                 <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                   <img 
-                    src="/WIN_20251221_16_03_57_Pro.jpg" 
+                    src="./WIN_20251221_16_03_57_Pro.jpg" 
                     alt="Damitachew Yiradu" 
                     className="w-full h-full object-cover"
                   />
