@@ -17,9 +17,9 @@ export const AboutSection = () => {
             <div className="order-2 lg:order-1">
               <div className="relative max-w-md mx-auto">
                 <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
-                  <img 
-                    src="./WIN_20251221_16_03_57_Pro.jpg" 
-                    alt="Damitachew Yiradu" 
+                  <img
+                    src="./portfolio_image.jpg"
+                    alt="Damitachew Yiradu"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -38,9 +38,9 @@ export const AboutSection = () => {
               </div>
               <pre className="font-mono text-xs sm:text-sm overflow-x-auto">
                 <code className="text-muted-foreground">
-{`{
+                  {`{
   "name": "`}<span className="text-primary">Damitachew Yiradu</span>{`",
-  "role": "`}<span className="text-green-400">Full Stack Developer</span>{`",
+  "role": "`}<span className="text-green-400">Junior Full Stack Developer</span>{`",
   "university": "`}<span className="text-yellow-400">Debre Markos University</span>{`",
   "year": "`}<span className="text-blue-400">4th Year</span>{`",
   "major": "`}<span className="text-purple-400">Software Engineering</span>{`",
@@ -64,7 +64,7 @@ export const AboutSection = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2">Education</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                      Currently pursuing Software Engineering at Debre Markos University, 
+                      Currently pursuing Software Engineering at Debre Markos University,
                       building a strong foundation in computer science and software development.
                     </p>
                   </div>
@@ -79,7 +79,7 @@ export const AboutSection = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2">Development</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                      Specialized in full-stack development with React for frontend, 
+                      Specialized in full-stack development with React for frontend,
                       Java for backend, and modern JavaScript throughout the stack.
                     </p>
                   </div>
@@ -94,7 +94,7 @@ export const AboutSection = () => {
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2">Goals</h3>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                      Passionate about creating impactful software solutions and 
+                      Passionate about creating impactful software solutions and
                       continuously learning new technologies to stay at the cutting edge.
                     </p>
                   </div>

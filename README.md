@@ -12,6 +12,13 @@ I'm a 4th Year Software Engineering Student at Debre Markos University, passiona
 - **Court Case Management System** - Digital solution for managing court cases and legal proceedings  
 - **Personal Portfolio** - This responsive portfolio website
 
+## Future Projects
+
+- **E-Commerce Platform** - Full-stack online shopping platform with payment integration
+- **Task Management App** - Collaborative project management tool with real-time updates
+- **Learning Management System** - Educational platform for course delivery and student tracking
+- **Social Media Dashboard** - Analytics dashboard for managing multiple social media accounts
+
 ## Technologies Used
 
 - **Frontend**: React, TypeScript, Tailwind CSS
