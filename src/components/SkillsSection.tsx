@@ -5,8 +5,11 @@ const skills = [
   { name: 'PHP', level: 65, color: 'from-purple-400 to-purple-600' },
   { name: 'MySQL', level: 70, color: 'from-blue-400 to-blue-600' },
   { name: 'HTML/CSS', level: 85, color: 'from-orange-400 to-pink-500' },
-  { name: 'Git', level: 65, color: 'from-gray-400 to-gray-600' },
-  { name: 'TypeScript', level: 60, color: 'from-blue-400 to-blue-600' },
+  { name: 'MongoDB', level: 65, color: 'from-blue-400 to-blue-600' },
+  { name: 'Node.js', level: 70, color: 'from-green-400 to-green-600' },
+  { name: 'Express', level: 65, color: 'from-blue-400 to-blue-600' },
+  { name: 'Git', level: 70, color: 'from-gray-400 to-gray-600' },
+  { name: 'TypeScript', level: 75, color: 'from-blue-400 to-blue-600' },
 ];
 
 const technologies = [
@@ -33,8 +36,8 @@ export const SkillsSection = () => {
             {/* Skill bars */}
             <div className="space-y-4 sm:space-y-6">
               {skills.map((skill, index) => (
-                <div 
-                  key={skill.name} 
+                <div
+                  key={skill.name}
                   className="animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >

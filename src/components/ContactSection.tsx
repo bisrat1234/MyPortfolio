@@ -13,17 +13,17 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Create mailto link with form data
     const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    
+
     // Open default email client
-    window.open(`mailto:damitachewyiradu@gmail.com?subject=${subject}&body=${body}`, '_self');
-    
+    window.open(`mailto:damitachewyirdu@gmail.com?subject=${subject}&body=${body}`, '_self');
+
     // Clear form
     setFormData({ name: '', email: '', message: '' });
-    
+
     toast({
       title: "Email opened!",
       description: "Your default email client should open with the message ready to send.",
@@ -49,10 +49,10 @@ export const ContactSection = () => {
             <div className="space-y-6 sm:space-y-8">
               <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-border">
                 <h3 className="text-xl sm:text-2xl font-bold mb-6">Contact Information</h3>
-                
+
                 <div className="space-y-4 sm:space-y-6">
-                  <a 
-                    href="mailto:damitachewyiradu@gmail.com"
+                  <a
+                    href="mailto:damitachewyirdu@gmail.com"
                     className="flex items-center gap-4 p-3 sm:p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-all group"
                   >
                     <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:glow-sm transition-all shrink-0">
@@ -60,11 +60,11 @@ export const ContactSection = () => {
                     </div>
                     <div className="min-w-0">
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-medium text-sm sm:text-base truncate">damitachewyiradu@gmail.com</p>
+                      <p className="font-medium text-sm sm:text-base truncate">damitachewyirdu@gmail.com</p>
                     </div>
                   </a>
 
-                  <a 
+                  <a
                     href="https://github.com/bisrat1234"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export const ContactSection = () => {
                     </div>
                   </div>
 
-                  <a 
+                  <a
                     href="https://t.me/hiwot423"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -104,7 +104,7 @@ export const ContactSection = () => {
                     </div>
                   </a>
 
-                  <a 
+                  <a
                     href="https://www.youtube.com/@lijinettube2017"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -125,7 +125,7 @@ export const ContactSection = () => {
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="card-gradient rounded-2xl p-6 sm:p-8 border border-border">
               <h3 className="text-xl sm:text-2xl font-bold mb-6">Send a Message</h3>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">Your Name</label>

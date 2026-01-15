@@ -8,21 +8,21 @@ const featuredProjects = [
     description: 'A comprehensive system for managing student clearance processes in educational institutions. Built with modern web technologies to streamline administrative workflows.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/bisrat1234/ClearanceManagementSystem',
-    live: '',
+    live: 'https://bisrat1234.github.io/ClearanceManagementSystem/',
   },
   {
     title: 'Court Case Management System',
     description: 'A digital solution for managing court cases, tracking legal proceedings, and maintaining case records. Designed to improve efficiency in judicial administration.',
-    tags: ['Java', 'Spring Boot', 'MySQL', 'React'],
+    tags: ['TypeScript', 'JavaScript', 'MongoDB', 'Html', 'CSS', 'React'],
     github: 'https://github.com/bisrat1234/CourtCaseManagementSystem',
-    live: '',
+    live: 'https://bisrat1234.github.io/CourtCaseManagementSystem/',
   },
   {
     title: 'Personal Portfolio',
     description: 'A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with React, TypeScript, and Tailwind CSS for optimal performance.',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/bisrat1234/portfolio',
-    live: '',
+    live: 'https://bisrat1234.github.io/MyPortfolio/',
   },
 ];
 
@@ -129,7 +129,7 @@ export const ProjectsSection = () => {
               <TabsTrigger value="featured">Featured Projects</TabsTrigger>
               <TabsTrigger value="future">Future Projects</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="featured">
               <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {featuredProjects.map((project, index) => (
@@ -137,7 +137,7 @@ export const ProjectsSection = () => {
                 ))}
               </div>
             </TabsContent>
-            
+
             <TabsContent value="future">
               <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {futureProjects.map((project, index) => (
