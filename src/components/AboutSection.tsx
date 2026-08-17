@@ -1,106 +1,97 @@
-import { Code2, GraduationCap, Rocket } from 'lucide-react';
+import { Code2, GraduationCap, Rocket, MapPin } from 'lucide-react';
+
+const cards = [
+  {
+    icon: GraduationCap,
+    title: 'Education',
+    desc: 'Software Engineering at Debre Markos University — building a strong CS foundation.',
+    accent: 'text-blue-400',
+    bg: 'bg-blue-400/10',
+  },
+  {
+    icon: Code2,
+    title: 'Development',
+    desc: 'Full-stack with React & TypeScript frontend, Java & Node.js backend.',
+    accent: 'text-primary',
+    bg: 'bg-primary/10',
+  },
+  {
+    icon: Rocket,
+    title: 'Goals',
+    desc: 'Building impactful software and staying at the cutting edge of modern dev.',
+    accent: 'text-purple-400',
+    bg: 'bg-purple-400/10',
+  },
+];
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 sm:py-32 relative">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              About <span className="text-gradient">Me</span>
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+    <section id="about" className="py-4 sm:py-6 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="font-mono text-xs text-primary uppercase tracking-widest">01 — About</span>
+          <div className="flex-1 h-px bg-white/5" />
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-start">
+          {/* Left */}
+          <div className="flex gap-5 items-start">
+            <div className="relative shrink-0">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden border border-white/10">
+                <img src="./portfolio_image.jpg" alt="Damitachew Yiradu" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-full h-full rounded-xl border border-primary/20 -z-10" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-0.5">Damitachew Yiradu</h2>
+              <p className="text-primary font-mono text-xs mb-2">Junior Full Stack Developer</p>
+              <div className="flex items-center gap-1 text-muted-foreground text-xs mb-4">
+                <MapPin size={12} />
+                <span>Debre Markos, Ethiopia</span>
+              </div>
+              <div className="rounded-lg border border-white/10 bg-white/[0.03] overflow-hidden">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 border-b border-white/5 bg-white/[0.02]">
+                  <div className="w-2 h-2 rounded-full bg-red-500/70" />
+                  <div className="w-2 h-2 rounded-full bg-yellow-500/70" />
+                  <div className="w-2 h-2 rounded-full bg-green-500/70" />
+                  <span className="ml-1.5 text-xs text-muted-foreground font-mono">profile.json</span>
+                </div>
+                <pre className="p-3 font-mono text-[10px] sm:text-xs overflow-x-auto leading-relaxed">
+                  <code>
+                    <span className="text-white/40">{'{'}</span>{'\n'}
+                    {'  '}<span className="text-blue-400">"role"</span><span className="text-white/40">: </span><span className="text-green-400">"Full Stack Dev"</span><span className="text-white/40">,</span>{'\n'}
+                    {'  '}<span className="text-blue-400">"year"</span><span className="text-white/40">: </span><span className="text-primary">"4th Year"</span><span className="text-white/40">,</span>{'\n'}
+                    {'  '}<span className="text-blue-400">"status"</span><span className="text-white/40">: </span><span className="text-green-400">"Open to Work"</span>{'\n'}
+                    <span className="text-white/40">{'}'}</span>
+                  </code>
+                </pre>
+              </div>
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Left side - Profile Image */}
-            <div className="order-2 lg:order-1">
-              <div className="relative max-w-md mx-auto">
-                <div className="aspect-square rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
-                  <img
-                    src="./portfolio_image.jpg"
-                    alt="Damitachew Yiradu"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse-glow" />
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" />
-              </div>
-            </div>
-
-            {/* Right side - Terminal style info */}
-            <div className="order-1 lg:order-2 card-gradient rounded-2xl p-6 sm:p-8 border border-border shadow-lg">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="ml-2 text-xs sm:text-sm text-muted-foreground font-mono">about.json</span>
-              </div>
-              <pre className="font-mono text-xs sm:text-sm overflow-x-auto">
-                <code className="text-muted-foreground">
-                  {`{
-  "name": "`}<span className="text-primary">Damitachew Yiradu</span>{`",
-  "role": "`}<span className="text-green-400">Junior Full Stack Developer</span>{`",
-  "university": "`}<span className="text-yellow-400">Debre Markos University</span>{`",
-  "year": "`}<span className="text-blue-400">4th Year</span>{`",
-  "major": "`}<span className="text-purple-400">Software Engineering</span>{`",
-  "passions": [
-    "Building web applications",
-    "Learning new technologies",
-    "Problem solving"
-  ]
-}`}
-                </code>
-              </pre>
-            </div>
-
-            {/* Right side - Info cards */}
-            <div className="order-3 lg:col-span-2 xl:col-span-1 space-y-4 sm:space-y-6">
-              <div className="card-gradient rounded-xl p-4 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:glow-sm transition-all shrink-0">
-                    <GraduationCap size={24} />
+          {/* Right */}
+          <div className="space-y-2">
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3">
+              Passionate software engineering student with hands-on experience building real-world apps.
+              I care about clean code, performance, and building things that matter.
+            </p>
+            {cards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className="flex gap-3 p-3 rounded-lg border border-white/5 bg-white/[0.02] hover:border-white/10 transition-all duration-200 group"
+                >
+                  <div className={`p-2 rounded-lg ${card.bg} shrink-0`}>
+                    <Icon size={14} className={card.accent} />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">Education</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      Currently pursuing Software Engineering at Debre Markos University,
-                      building a strong foundation in computer science and software development.
-                    </p>
+                    <h4 className="font-semibold text-xs mb-0.5 group-hover:text-primary transition-colors">{card.title}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{card.desc}</p>
                   </div>
                 </div>
-              </div>
-
-              <div className="card-gradient rounded-xl p-4 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:glow-sm transition-all shrink-0">
-                    <Code2 size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">Development</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      Specialized in full-stack development with React for frontend,
-                      Java for backend, and modern JavaScript throughout the stack.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card-gradient rounded-xl p-4 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:glow-sm transition-all shrink-0">
-                    <Rocket size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">Goals</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      Passionate about creating impactful software solutions and
-                      continuously learning new technologies to stay at the cutting edge.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

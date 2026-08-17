@@ -1,105 +1,105 @@
-import { Award, Calendar, Users, Code } from 'lucide-react';
+import { Award, Code, Users, TrendingUp } from 'lucide-react';
 
-const achievements = [
+const milestones = [
   {
     icon: Award,
     title: 'Academic Excellence',
-    description: 'Maintaining high GPA in Software Engineering program',
-    date: '2021 - Present',
-    color: 'from-yellow-400 to-orange-500',
+    desc: 'Maintaining high GPA in the Software Engineering program at Debre Markos University.',
+    period: '2021 – Present',
+    accent: 'text-yellow-400',
+    bg: 'bg-yellow-400/10',
+    border: 'border-yellow-400/10',
   },
   {
     icon: Code,
     title: 'Full Stack Projects',
-    description: 'Developed multiple end-to-end applications using modern technologies',
-    date: '2023 - 2024',
-    color: 'from-blue-400 to-purple-500',
+    desc: 'Delivered multiple end-to-end applications using modern web technologies and best practices.',
+    period: '2023 – 2024',
+    accent: 'text-blue-400',
+    bg: 'bg-blue-400/10',
+    border: 'border-blue-400/10',
   },
   {
     icon: Users,
     title: 'Team Collaboration',
-    description: 'Successfully worked on group projects and collaborative development',
-    date: '2022 - Present',
-    color: 'from-green-400 to-teal-500',
+    desc: 'Successfully led and contributed to group projects and collaborative software development efforts.',
+    period: '2022 – Present',
+    accent: 'text-green-400',
+    bg: 'bg-green-400/10',
+    border: 'border-green-400/10',
   },
   {
-    icon: Calendar,
-    title: 'Continuous Learning',
-    description: 'Actively learning new technologies and staying updated with industry trends',
-    date: 'Ongoing',
-    color: 'from-pink-400 to-red-500',
+    icon: TrendingUp,
+    title: 'Ethiopian AI Institute Startup',
+    desc: 'Built full-stack features for Besew Online (job platform) and Besew Casting (talent platform) at the Ethiopian Artificial Intelligence Institute — two live production products serving real users.',
+    period: '2025',
+    accent: 'text-primary',
+    bg: 'bg-primary/10',
+    border: 'border-primary/10',
   },
+  {
+    icon: TrendingUp,
+    title: 'Continuous Growth',
+    desc: 'Actively learning new technologies and staying current with evolving industry standards.',
+    period: 'Ongoing',
+    accent: 'text-purple-400',
+    bg: 'bg-purple-400/10',
+    border: 'border-purple-400/10',
+  },
+];
+
+const stats = [
+  { value: '6+', label: 'Projects Shipped' },
+  { value: '12+', label: 'Technologies' },
+  { value: '4th', label: 'Year of Study' },
+  { value: '10+', label: 'GitHub Repos' },
 ];
 
 export const AchievementsSection = () => {
   return (
-    <section id="achievements" className="py-20 sm:py-32 relative">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              My <span className="text-gradient">Journey</span>
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-            <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              Key milestones and achievements in my development journey
-            </p>
-          </div>
+    <section id="achievements" className="py-4 sm:py-6 relative bg-white/[0.01]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="flex items-center gap-3 mb-4">
+          <span className="font-mono text-xs text-primary uppercase tracking-widest">04 — Journey</span>
+          <div className="flex-1 h-px bg-white/5" />
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            {achievements.map((achievement, index) => {
-              const IconComponent = achievement.icon;
-              return (
-                <div
-                  key={achievement.title}
-                  className="card-gradient rounded-2xl p-6 sm:p-8 border border-border hover:border-primary/50 transition-all duration-300 group animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${achievement.color} bg-opacity-10 group-hover:glow-sm transition-all shrink-0`}>
-                      <IconComponent size={28} className="text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg sm:text-xl font-bold group-hover:text-primary transition-colors">
-                          {achievement.title}
-                        </h3>
-                        <span className="text-xs sm:text-sm text-muted-foreground font-mono">
-                          {achievement.date}
-                        </span>
-                      </div>
-                      <p className="text-sm sm:text-base text-muted-foreground">
-                        {achievement.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        {/* Stats row */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-xl border border-white/5 bg-white/[0.02] p-4 text-center hover:border-primary/20 transition-all duration-300"
+            >
+              <div className="text-2xl sm:text-3xl font-bold text-primary mb-1">{stat.value}</div>
+              <div className="text-xs text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </div>
 
-          {/* Stats */}
-          <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              { label: 'Projects Completed', value: '3+' },
-              { label: 'Technologies Used', value: '12+' },
-              { label: 'Years of Study', value: '4' },
-              { label: 'GitHub Repos', value: '10+' },
-            ].map((stat, index) => (
+        {/* Milestone cards */}
+        <div className="grid sm:grid-cols-2 gap-3">
+          {milestones.map((item) => {
+            const Icon = item.icon;
+            return (
               <div
-                key={stat.label}
-                className="text-center p-4 sm:p-6 card-gradient rounded-xl border border-border animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                key={item.title}
+                className={`flex gap-4 p-5 rounded-xl border ${item.border} bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group`}
               >
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">
-                  {stat.value}
+                <div className={`p-2.5 rounded-lg ${item.bg} shrink-0 h-fit mt-0.5`}>
+                  <Icon size={18} className={item.accent} />
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
-                  {stat.label}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">{item.title}</h3>
+                    <span className="text-xs font-mono text-muted-foreground shrink-0">{item.period}</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

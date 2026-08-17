@@ -1,89 +1,96 @@
-const skills = [
-  { name: 'React', level: 75, color: 'from-cyan-400 to-blue-500' },
-  { name: 'JavaScript', level: 80, color: 'from-yellow-400 to-orange-500' },
-  { name: 'Java', level: 70, color: 'from-red-400 to-red-600' },
-  { name: 'PHP', level: 65, color: 'from-purple-400 to-purple-600' },
-  { name: 'MySQL', level: 70, color: 'from-blue-400 to-blue-600' },
-  { name: 'HTML/CSS', level: 85, color: 'from-orange-400 to-pink-500' },
-  { name: 'MongoDB', level: 65, color: 'from-blue-400 to-blue-600' },
-  { name: 'Node.js', level: 70, color: 'from-green-400 to-green-600' },
-  { name: 'Express', level: 65, color: 'from-blue-400 to-blue-600' },
-  { name: 'Git', level: 70, color: 'from-gray-400 to-gray-600' },
-  { name: 'TypeScript', level: 75, color: 'from-blue-400 to-blue-600' },
+const skillGroups = [
+  {
+    category: 'Frontend',
+    color: 'text-cyan-400',
+    dot: 'bg-cyan-400',
+    skills: [
+      { name: 'React', level: 75 },
+      { name: 'TypeScript', level: 75 },
+      { name: 'JavaScript', level: 80 },
+      { name: 'HTML / CSS', level: 85 },
+      { name: 'Tailwind CSS', level: 80 },
+    ],
+  },
+  {
+    category: 'Backend',
+    color: 'text-green-400',
+    dot: 'bg-green-400',
+    skills: [
+      { name: 'Node.js', level: 70 },
+      { name: 'Express', level: 65 },
+      { name: 'Java', level: 70 },
+      { name: 'Spring Boot', level: 60 },
+      { name: 'PHP', level: 65 },
+    ],
+  },
+  {
+    category: 'Database & Tools',
+    color: 'text-orange-400',
+    dot: 'bg-orange-400',
+    skills: [
+      { name: 'MySQL', level: 70 },
+      { name: 'MongoDB', level: 65 },
+      { name: 'Git', level: 70 },
+      { name: 'REST API', level: 72 },
+      { name: 'Vite', level: 70 },
+    ],
+  },
 ];
 
-const technologies = [
-  'React', 'Java', 'JavaScript', 'PHP', 'MySQL', 'Node.js', 'Express',
-  'Spring Boot', 'MongoDB', 'Git', 'REST API', 'Tailwind CSS'
-];
+const learning = ['React Native', 'Flutter', 'Docker', 'AWS'];
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 sm:py-32 relative bg-secondary/20">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              My <span className="text-gradient">Skills</span>
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-            <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm sm:text-base">
-              Technologies and tools I work with to bring ideas to life
-            </p>
-          </div>
+    <section id="skills" className="py-4 sm:py-6 relative bg-white/[0.01]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="flex items-center gap-3 mb-4">
+          <span className="font-mono text-xs text-primary uppercase tracking-widest">02 — Skills</span>
+          <div className="flex-1 h-px bg-white/5" />
+        </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
-            {/* Skill bars */}
-            <div className="space-y-4 sm:space-y-6">
-              {skills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  className="animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium text-sm sm:text-base">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {skillGroups.map((group) => (
+            <div
+              key={group.category}
+              className="rounded-xl border border-white/5 bg-white/[0.02] p-5 hover:border-white/10 transition-all duration-300"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <span className={`w-2 h-2 rounded-full ${group.dot}`} />
+                <h3 className={`text-sm font-semibold ${group.color}`}>{group.category}</h3>
+              </div>
+              <div className="space-y-4">
+                {group.skills.map((skill) => (
+                  <div key={skill.name}>
+                    <div className="flex justify-between items-center mb-1.5">
+                      <span className="text-sm text-foreground/80">{skill.name}</span>
+                      <span className="text-xs font-mono text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-primary/60 to-primary rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
                   </div>
-                  <div className="h-2.5 sm:h-3 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Technology tags */}
-            <div className="card-gradient rounded-2xl p-6 sm:p-8 border border-border">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6">Technologies</h3>
-              <div className="flex flex-wrap gap-2 sm:gap-3">
-                {technologies.map((tech, index) => (
-                  <span
-                    key={tech}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-secondary border border-border rounded-lg text-xs sm:text-sm font-medium hover:border-primary hover:text-primary transition-all duration-300 cursor-default"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    {tech}
-                  </span>
                 ))}
               </div>
-
-              <div className="mt-8 pt-6 border-t border-border">
-                <h4 className="font-semibold mb-4 text-sm sm:text-base">Currently Learning</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['Mobile App Development', 'React Native', 'Flutter'].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-lg text-xs sm:text-sm font-medium text-primary"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
+          ))}
+        </div>
+
+        {/* Currently learning */}
+        <div className="mt-3 rounded-xl border border-primary/10 bg-primary/[0.03] p-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-xs font-mono text-primary uppercase tracking-widest shrink-0">Currently learning →</span>
+            {learning.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 text-xs font-medium rounded-full border border-primary/20 text-primary bg-primary/5"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>

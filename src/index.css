@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,102 +6,108 @@
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
-    --foreground: 210 40% 98%;
+    /* Deep navy background — Stripe/Linear inspired */
+    --background: 230 25% 5%;
+    --foreground: 220 20% 96%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 228 22% 8%;
+    --card-foreground: 220 20% 96%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 228 22% 8%;
+    --popover-foreground: 220 20% 96%;
 
-    --primary: 175 80% 50%;
-    --primary-foreground: 220 20% 6%;
+    /* Electric indigo/violet — premium enterprise accent */
+    --primary: 252 100% 68%;
+    --primary-foreground: 230 25% 5%;
 
-    --secondary: 220 18% 14%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 228 20% 12%;
+    --secondary-foreground: 220 20% 96%;
 
-    --muted: 220 18% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 228 20% 12%;
+    --muted-foreground: 220 15% 50%;
 
-    --accent: 175 80% 50%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 252 100% 68%;
+    --accent-foreground: 230 25% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 20% 96%;
 
-    --border: 220 18% 18%;
-    --input: 220 18% 18%;
-    --ring: 175 80% 50%;
+    --border: 228 20% 14%;
+    --input: 228 20% 14%;
+    --ring: 252 100% 68%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(175 80% 50%) 0%, hsl(200 80% 50%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 20% 6%) 0%, hsl(220 18% 10%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 18% 12%) 0%, hsl(220 18% 8%) 100%);
-    --glow-primary: 0 0 60px hsl(175 80% 50% / 0.3);
-    --glow-sm: 0 0 20px hsl(175 80% 50% / 0.2);
-    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    /* Gradient: indigo → violet → purple */
+    --gradient-primary: linear-gradient(135deg, hsl(252 100% 68%) 0%, hsl(280 90% 65%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(230 25% 5%) 0%, hsl(228 22% 8%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(228 22% 9%) 0%, hsl(228 22% 6%) 100%);
+    --glow-primary: 0 0 60px hsl(252 100% 68% / 0.25);
+    --glow-sm: 0 0 20px hsl(252 100% 68% / 0.15);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.6);
 
-    /* Typography */
-    --font-display: 'Space Grotesk', sans-serif;
+    --font-display: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    --sidebar-background: 220 18% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 175 80% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 18% 14%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 220 18% 18%;
-    --sidebar-ring: 175 80% 50%;
+    --sidebar-background: 228 22% 7%;
+    --sidebar-foreground: 220 20% 96%;
+    --sidebar-primary: 252 100% 68%;
+    --sidebar-primary-foreground: 230 25% 5%;
+    --sidebar-accent: 228 20% 12%;
+    --sidebar-accent-foreground: 220 20% 96%;
+    --sidebar-border: 228 20% 14%;
+    --sidebar-ring: 252 100% 68%;
   }
 
   .light {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* Warm slate background — not pure white, gives depth */
+    --background: 220 20% 96%;
+    --foreground: 224 30% 10%;
 
-    --card: 220 14% 96%;
-    --card-foreground: 220 20% 10%;
+    /* Cards are pure white — pops against the slate bg */
+    --card: 0 0% 100%;
+    --card-foreground: 224 30% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 224 30% 10%;
 
-    --primary: 175 80% 40%;
+    /* Deeper indigo for light mode — more authority */
+    --primary: 252 80% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 220 16% 91%;
+    --secondary-foreground: 224 30% 10%;
 
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 220 16% 91%;
+    --muted-foreground: 224 14% 46%;
 
-    --accent: 175 80% 40%;
+    --accent: 252 80% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 85%;
-    --input: 220 13% 85%;
-    --ring: 175 80% 40%;
+    /* Visible borders — slate/silver for card definition */
+    --border: 220 14% 84%;
+    --input: 220 14% 84%;
+    --ring: 252 80% 52%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(175 80% 40%) 0%, hsl(200 80% 45%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 14% 98%) 0%, hsl(220 14% 94%) 100%);
-    --glow-primary: 0 0 60px hsl(175 80% 40% / 0.2);
-    --glow-sm: 0 0 20px hsl(175 80% 40% / 0.15);
-    --shadow-card: 0 10px 40px -10px hsl(220 20% 10% / 0.1);
+    --gradient-primary: linear-gradient(135deg, hsl(252 80% 52%) 0%, hsl(280 75% 55%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 96%) 0%, hsl(220 18% 93%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 16% 97%) 100%);
+    --glow-primary: 0 0 40px hsl(252 80% 52% / 0.18);
+    --glow-sm: 0 0 16px hsl(252 80% 52% / 0.12);
+    /* Real drop shadow for card depth */
+    --shadow-card: 0 1px 3px hsl(224 30% 10% / 0.06), 0 4px 16px hsl(224 30% 10% / 0.08);
 
-    --sidebar-background: 220 14% 96%;
-    --sidebar-foreground: 220 20% 10%;
-    --sidebar-primary: 175 80% 40%;
+    --sidebar-background: 220 18% 94%;
+    --sidebar-foreground: 224 30% 10%;
+    --sidebar-primary: 252 80% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 92%;
-    --sidebar-accent-foreground: 220 20% 10%;
-    --sidebar-border: 220 13% 85%;
-    --sidebar-ring: 175 80% 40%;
+    --sidebar-accent: 220 16% 91%;
+    --sidebar-accent-foreground: 224 30% 10%;
+    --sidebar-border: 220 14% 84%;
+    --sidebar-ring: 252 80% 52%;
   }
 }
 
@@ -117,6 +123,9 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-display);
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -144,6 +153,18 @@
 
   .card-gradient {
     background: var(--gradient-card);
+  }
+
+  /* Light mode card surfaces — white with shadow instead of transparent overlay */
+  .light .card-surface {
+    background: hsl(var(--card));
+    border-color: hsl(var(--border));
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Ensure section alternating backgrounds work in light mode */
+  .light section {
+    border-color: hsl(var(--border) / 0.6);
   }
 
   .animate-float {
@@ -215,4 +236,62 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
+}
+
+/* ─── Light mode overrides ─────────────────────────────────────────────────── */
+/* Replace near-invisible transparent overlays with proper white cards + shadow */
+
+.light [class*="bg-white/[0.02]"],
+.light [class*="bg-white\\/\\[0\\.02\\]"] {
+  background: hsl(var(--card)) !important;
+  box-shadow: 0 1px 3px hsl(224 30% 10% / 0.05), 0 2px 8px hsl(224 30% 10% / 0.06);
+}
+
+.light [class*="bg-white/[0.03]"],
+.light [class*="bg-white/[0.04]"],
+.light [class*="bg-white/[0.05]"] {
+  background: hsl(220 16% 97%) !important;
+}
+
+.light [class*="bg-white/5"] {
+  background: hsl(220 14% 92%) !important;
+}
+
+.light [class*="border-white/5"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+.light [class*="border-white/10"] {
+  border-color: hsl(220 14% 80%) !important;
+}
+
+.light [class*="hover\\:border-white\\/10"]:hover,
+.light [class*="hover:border-white/10"]:hover {
+  border-color: hsl(252 80% 52% / 0.4) !important;
+}
+
+.light [class*="hover\\:bg-white\\/5"]:hover,
+.light [class*="hover:bg-white/5"]:hover {
+  background: hsl(220 14% 92%) !important;
+}
+
+/* Grid background lines — invisible in light mode */
+.light [class*="bg-\\[linear-gradient"] {
+  opacity: 0.4;
+}
+
+/* Section divider lines */
+.light .h-px.bg-white\/5 {
+  background: hsl(var(--border)) !important;
+}
+
+/* Terminal block */
+.light [class*="bg-white/[0.03]"] pre {
+  background: transparent;
+}
+
+/* Profile image — always visible regardless of mode */
+.light img[alt="Damitachew Yiradu"] {
+  box-shadow: 0 0 0 3px hsl(var(--background)), 0 0 0 5px hsl(var(--primary) / 0.25), 0 4px 16px hsl(224 30% 10% / 0.15);
+  border-radius: 0.75rem;
 }
